@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DS - Quote Services</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Cormorant+Garamond:400,600,700|Exo+2:400,500,600,700" rel="stylesheet">
+    <script src="js/myscripts.js" type="text/javascript"></script>
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <!-- icons css link -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- resets the browser default css-->
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+    <header>
+      <!-- contains the logo -->
+      <img src="img/logo.png">
+      <h2>Graphic Design Services</h2>
+    </header>
+    <div id="container">
+      <form id="signup">
+        <h2 class="bold_uppercase">Quote Request</h2>
+        <!-- Section Contact Info -->
+        <section>
+          <h4>Tell me things about you!</h4>
+          <fieldset>
+            <legend>Contact Info</legend>
+            <ul id="inputContainer">
+              <li>
+                <label>First Name</label>
+                <input type="text" name="firstname" id="firstname">
+              </li>
+              <li>
+                <label>Last Name</label>
+                <input type="text" name="lastname" id="lastname">
+              </li>
+              <li>
+                <label>Email</label>
+                <input type="text" name="email" id="email">
+              </li>
+              <li>
+                <label>Phone</label>
+                <input type="tel" name="phone" id="phone" placeholder="xxx-xxx-xxxx">
+              </li>
+              <li>
+                <label>City</label>
+                <input type="text" name="city" id="city">
+              </li>
+              <li>
+                <label>Province</label>
+                <select id="province" name="province">
+                  <option value="">-- Choose Your Province --</option>
+                  <option value="AB">Alberta</option>
+                  <option value="BC">British Columbia</option>
+                  <option value="MB">Manitoba</option>
+                  <option value="NB">New Brunswick</option>
+                  <option value="NL">Newfoundland and Labrador</option>
+                  <option value="NS">Nova Scotia</option>
+                  <option value="ON">Ontario</option>
+                  <option value="PE">Prince Edward Island</option>
+                  <option value="QC">Quebec</option>
+                  <option value="SK">Saskatchewan</option>
+                  <option value="NT">Northwest Territories</option>
+                  <option value="NU">Nunavut</option>
+                  <option value="YT">Yukon</option>
+                </select>
+              </li>
+              <li>
+                <label>Postal Code</label>
+                <input type="text" name="postalcode" id="postalcode">
+              </li>
+              <li>
+                <label>Referred by</label>
+                <select id="referred" name="referred">
+                  <option value="">-- Choose an option --</option>
+                  <option value="friend">Friend</option>
+                  <option value="company">Company</option>
+                  <option value="adversiting">Adversiting</option>
+                  <option value="google">Search Engines</option>
+                  <option value="None">None of the above</option>
+                </select>
+              </li>
+            </ul>
+          </fieldset>
+        </section>
+        <section>
+          <div id="toronto_match">
+             Hi mate! I live in Toronto too.
+             We <i class="fas fa-hand-peace"></i> rock!
+          </div>
+        </section>
+        <!-- Section Project Info -->
+        <section>
+          <h4>Tell me things about your project!</h4>
+          <fieldset>
+            <legend>Project Info</legend>
+            <h5>Type of project</h5>
+            <label class="containerRadio">Web Development <span id="wd_rate"> Hourly Rate: 40$</span>
+            <input type="radio" name="project_type" value="WD" id="WD" onclick="hourlyMessage(this);">
+            <span class="checkmark"></span>
+            </label>
+            <label class="containerRadio">Graphic Design <span id="gd_rate"> Hourly Rate: 25$</span>
+            <input type="radio" name="project_type" value="GD" id="GD" onclick="hourlyMessage(this);">
+            <span class="checkmark"></span>
+            </label>
+            <label class="containerRadio">Photography/Video <span id="pv_rate"> Hourly Rate: 30$</span>
+            <input type="radio" name="project_type" value="PV" id="PV" onclick="hourlyMessage(this);">
+            <span class="checkmark"></span>
+            </label>
+            <h5>What do you have in mind?</h5>
+            <textarea name="name" id="details_textarea"></textarea>
+          </fieldset>
+        </section>
+        <input type="submit" value="Send Quote" id="button_send">
+        <section id="errors">
+        </section>
+      </form>
+    </div>
+    <footer>
+      <p>&copy;2018 / POWERED BY DS</p>
+    </footer>
+    <script>
+      formChecker.initForm(document.querySelector("#signup"));
+    </script>
+  </body>
+</html>
